@@ -8,35 +8,42 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="container">
-      <div class="image">
-        <h1>Odin Project</h1>
-        <p>Photo by <a href="https://unsplash.com/@intricateexplorer">Intricate Explorer</a> on <a href="unsplash.com">Unsplash</a></p>
-
+    <main class="about">
+      <div class="container">
+        <section class="grid info">
+          <div class="column-xs-5 sign-up-info">
+            <div class="skrim">
+                <img src="images/odin-lined.png" height="72px">
+                <h1 class="section-heading">Odin</h1>
+            </div>
+            <p class="photo-credit">Photo by <a href="https://unsplash.com/@intricateexplorer">Intricate Explorer</a> on <a href="unsplash.com">Unsplash</a></p>
+          </div>
+          <div class="column-xs-5">
+            <div class="intro">
+              <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
+              <p>You know you want to.</p>
+            </div>
+            <fieldset>
+              <h2>Let's do this!</h2>
+              <label for="firstname">First Name</label>
+              <input type="text" name="firstname" id="firstname" required />
+              <label for="lastname">Last Name</label>
+              <input type="text" name="lastname" id="lastname" required />
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+              <label for="phone">Phone Number</label>
+              <input type="number" name="phoneNumber" id="phoneNumber" required />
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" required />
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" name="passwordConfirm" id="passwordConfirm" required />
+            </fieldset>
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a class="login" href="#">Log in</a></p>
+          </div>
+        </section>
       </div>
-      <div class="form-wrapper">
-        <p>This is not a real online service! You know you need something like this in your your life to help you realize your deepest dreams. Sign up now to get started.</p>
-        <p>You know you want to.</p>
-        <fieldset>
-          <h2>Let's do this!</h2>
-          <label for="firstname">First Name</label>
-          <input type="text" name="firstname" id="firstname" required />
-          <label for="lastname">Last Name</label>
-          <input type="text" name="lastname" id="lastname" required />
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" required />
-          <label for="phone">Phone Number</label>
-          <input type="number" name="phoneNumber" id="phoneNumber" required />
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" required />
-          <label for="confirmPassword">Confirm Password</label>
-          <input type="password" name="passwordConfirm" id="passwordConfirm" required />
-        </fieldset>
-        <button type="submit">Create Account</button>
-        <p>Already have an account? <a href="#">Log in</a></p>
-      </div>
-    </div>
-    
+    </main>
     <!-- <script src="index.js"></script> -->
   </body>
 </html>
