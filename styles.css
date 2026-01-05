@@ -1,0 +1,23 @@
+/* Styles go here */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+}
+.image {
+    color: white;
+    text-align: center;
+    background-image: url("images/intricate-explorer-Xfdi4BSut_Q-unsplash.jpg");
+    width: 50%;
+    height: 100%;
+}
+.form-wrapper {
+    width: 50%;
+}
