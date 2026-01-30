@@ -48,11 +48,15 @@ a {
 
 button {
 	color: #FFF;
-  background-color: #596D48;
-  border-radius: 8px;
-  padding: 10px 32px;
+	background-color: #596D48;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 32px;
 	transition: transform 80ms ease-in;
-  width: 160px;
+	width: 160px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 button:active {
@@ -71,8 +75,7 @@ button.ghost {
 form {
 	background-color: #FFFFFF;
 	display: flex;
-	align-items: left;
-	justify-content: left;
+	align-items: flex-start;
 	flex-direction: column;
 	padding: 0 16px;
 	text-align: left;
@@ -161,22 +164,37 @@ input {
 .skrim {
     position: absolute;
     text-align: center;
-    top: 40px;
+    top: 20%; /* Use percentage instead of fixed pixels */
     left: 0;
     z-index: 100;
-    height: 80px;
-    width: 384px;
+    width: 50%; /* Match the overlay width */
     background-color: hsla(0, 0%, 0%, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 0;
 }
 
 .skrim h1 {
-  color: #FFF;
-  font-family: 'Norse-Bold';
-  font-size: 32px;
-
+    color: #FFF;
+    font-family: 'Norse-Bold', sans-serif;
+    font-size: clamp(24px, 4vw, 32px); /* Responsive font size */
+    white-space: nowrap;
 }
 
 .skrim img {
-    position: relative;
+    height: clamp(48px, 8vw, 72px); /* Responsive image size */
+    width: auto;
+}
 
+.photo-credit {
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	font-size: 10px;
+	color: white;
+	z-index: 101;
+	margin: 0;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
