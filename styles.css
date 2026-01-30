@@ -1,210 +1,182 @@
+
 @font-face {
     font-family: Norse-Bold;
     src: url('fonts/Norse-Bold.otf');
 }
 
-a {
-    color: #FFF;
-}
-
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-*:not(dialog) {
-  margin: 0;
-}
-
-/* 3. Enable keyword animations */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
+* {
+	box-sizing: border-box;
 }
 
 body {
-  /* 4. Add accessible line-height */
-  line-height: 1.5;
-  /* 5. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
 }
 
-/* 6. Improve media defaults */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+h1 {
+	margin: 0;
 }
 
-/* 7. Inherit fonts for form controls */
-input, button, textarea, select {
-  font: inherit;
+h2 {
+	font-size: 16px;
 }
 
-/* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-/* 9. Improve line wrapping */
 p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-
-/*
-  10. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
 }
 
-body {
-  font-family: sans-serif;
-}
-.container {
-  margin: auto;
-  padding: 0 1rem;
-  max-width: 71.25rem;
-  width: 100%;
+span {
+	font-size: 12px;
 }
 
-.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex-flow: row wrap;
-}
-.grid > [class*=column-] {
-  display: block;
-}
-
-.sign-up-info {
-  color: white;
-  text-align: center;
-  background-image: url(https://images.unsplash.com/photo-1767022724846-26373be6f80d?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  height: 420px;
-}
-
-.skrim {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: hsla(0, 0%, 0%, 0.5);
-    margin-top: 80px;
-    font-family: 'Norse-Bold';
-    font-size: 32px;
-}
-
-.skrim img {
-    display: inline;
-}
-
-.photo-credit {
-    font-size: x-small;
-    margin-top: 248px;
-}
-
-.intro h2 {
-    font-size: 16px;
-    margin-top: 48px;
-}
-
-fieldset {
-    border: 0;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
 }
 
 button {
-    color: #FFF;
-    background-color: #596D48;
-    border-radius: 16px;
-    padding: 16px 32px;
+	color: #FFF;
+  background-color: #596D48;
+  border-radius: 8px;
+  padding: 10px 32px;
+	transition: transform 80ms ease-in;
+  width: 160px;
 }
 
-.login {
-    color: #596D48;
+button:active {
+	transform: scale(0.95);
 }
 
-.first {
-  order: -1;
+button:focus {
+	outline: none;
 }
 
-.last {
-  order: 12;
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
 }
 
-.align-top {
-  align-items: start;
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: left;
+	justify-content: left;
+	flex-direction: column;
+	padding: 0 16px;
+	text-align: left;
 }
 
-.align-center {
-  align-items: center;
+form label {
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
-.align-bottom {
-  align-items: end;
+input {
+	background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+	padding: 8px 15px;
+	margin: 8px 0;
+	width: 100%;
 }
 
-.column-xs-1 {
-  flex-basis: 8.3333333333%;
-  max-width: 8.3333333333%;
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
 }
 
-.column-xs-2 {
-  flex-basis: 16.6666666667%;
-  max-width: 16.6666666667%;
+.form-container {
+	position: absolute;
+	left: 50%;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
 }
 
-.column-xs-3 {
-  flex-basis: 25%;
-  max-width: 25%;
+.form-container p {
+  margin: 24px 16px;
+  font-size: 12px;
 }
 
-.column-xs-4 {
-  flex-basis: 33.3333333333%;
-  max-width: 33.3333333333%;
+.form__container {
+  display: flex;
 }
 
-.column-xs-5 {
-  flex-basis: 41.6666666667%;
-  max-width: 41.6666666667%;
+.column-first {
+  flex-basis: 50%;
+  max-width: 50%;
+  margin-left: 0;
 }
 
 .column-xs-6 {
   flex-basis: 50%;
   max-width: 50%;
+  margin-left: 10px;
 }
 
-.column-xs-7 {
-  flex-basis: 58.3333333333%;
-  max-width: 58.3333333333%;
+.container__overlay {
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	transition: transform 0.6s ease-in-out;
+	width: 50%;
+	z-index: 100;
 }
 
-.column-xs-8 {
-  flex-basis: 66.6666666667%;
-  max-width: 66.6666666667%;
+.overlay {
+	background-color: var(--lightblue);
+	background: url("./images/intricate-explorer-Xfdi4BSut_Q-unsplash.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	left: -100%;
+	position: relative;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+	width: 200%;
 }
 
-.column-xs-9 {
-  flex-basis: 75%;
-  max-width: 75%;
+.skrim {
+    position: absolute;
+    text-align: center;
+    top: 40px;
+    left: 0;
+    z-index: 100;
+    height: 80px;
+    width: 384px;
+    background-color: hsla(0, 0%, 0%, 0.5);
 }
 
-.column-xs-10 {
-  flex-basis: 83.3333333333%;
-  max-width: 83.3333333333%;
+.skrim h1 {
+  color: #FFF;
+  font-family: 'Norse-Bold';
+  font-size: 32px;
+
 }
 
-.column-xs-11 {
-  flex-basis: 91.6666666667%;
-  max-width: 91.6666666667%;
-}
+.skrim img {
+    position: relative;
 
-.column-xs-12 {
-  flex-basis: 100%;
-  max-width: 100%;
 }
