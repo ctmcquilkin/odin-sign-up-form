@@ -51,6 +51,10 @@ a {
 	text-decoration: none;
 }
 
+.login:hover {
+	text-decoration: underline;
+}
+
 button {
 	color: #FFF;
 	background-color: #596D48;
@@ -99,6 +103,15 @@ input {
 	margin: 8px 0;
 	width: 100%;
 }
+
+input:valid {
+  border-color: blue;
+}
+
+input:invalid {
+  border-color: red;
+}
+
 
 .container {
 	background-color: #fff;
